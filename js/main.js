@@ -29,7 +29,7 @@ $(document).ready(function() {
 
               alert("Complimenti, hai vinto!");
             } else {
-              alert("numero non corretto, hai perso!");
+              alert("numero non corretto, hai perso! ne hai indovinate: " + arrayMatches.length);
               j = arrayRandom.length;
             }
 
