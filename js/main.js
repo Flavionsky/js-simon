@@ -18,20 +18,18 @@ $(document).ready(function() {
 
       for(var j=0; j < arrayRandom.length; j++){
 
-          var numberMatches = parseInt(prompt("inserisci il numero in posizione " + (parseInt(j)+1) ));
+          var numberMatches = prompt("inserisci il numero in posizione " + (parseInt(j)+1));
 
-            console.log(arrayRandom[j])
-            console.log(numberMatches)
-            if(numberMatches == parseInt(arrayRandom[j])){
+            if(numberMatches == parseInt(arrayRandom[j]) && arrayMatches.length < 4){
 
               alert("Giusto, puoi continuare!")
               arrayMatches.push(numberMatches);
 
-            } else if(arrayMatches.length ==5){
+            } else if(arrayMatches.length == 4 && numberMatches == parseInt(arrayRandom[j])){
 
               alert("Complimenti, hai vinto!");
             } else {
-              alert("numero non corretto, hai perso!")
+              alert("numero non corretto, hai perso!");
               j = arrayRandom.length;
             }
 
